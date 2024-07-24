@@ -1,0 +1,95 @@
+
+/* Phone icon */
+.fa-phone {
+    position:fixed;
+    margin-right: 5px;
+}
+
+/* "Call Us" link */
+a[href^="tel:"] {
+    display: inline-flex;
+    text-decoration: ghostwhite;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 35px;
+    position: fixed;
+    bottom: 140px; /* Adjust for positioning above the WhatsApp button */
+    right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+a[href^="tel:"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+.whatsapp-btn-container {
+    position: fixed;
+    right:40px;
+    opacity: 0;
+    bottom: 600px;
+    padding: 24px;
+    animation: fade-up 1000ms forwards;
+    animation-delay: 1000ms;
+}
+
+@keyframes fade-up {
+    100% {
+        bottom: 24px;
+        opacity: 1;
+    }
+}
+
+.whatsapp-btn-container .whatsapp-btn {
+    position:static;
+    font-size: 48px;
+    color: #25d366;
+    display: inline-block;
+    transition: all 400ms;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover {
+    transform: scale(1.2);
+}
+
+.whatsapp-btn-container span {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #075e54;
+    transform: rotateZ(20deg) translateX(10px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover + span {
+    transform: rotateZ(0deg) translateX(0px);
+    opacity: 1;
+}
+
+.phone-call {
+    position: fixed;
+    top: 0;
+    left: 4px;
+    bottom: 140px; 
+    right: 20px; /* Adjust this value to control the distance from the right */
+    background-color: #ffffff; /* Optional: Background color */
+    padding: 101px; /* Optional: Padding around the content */
+    border: 1px solid #cccccc; /* Optional: Border */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a lifted effect */
+    z-index: 9999; /* Optional: Ensure it appears above other content */
+}
+
+.phone-call a {
+    text-decoration: none; /* Remove underline from the link */
+    color: #333333; /* Optional: Link text color */
+}
+
+.phone-call a:hover {
+    color: #555555; /* Optional: Hover color for the link */
+}
